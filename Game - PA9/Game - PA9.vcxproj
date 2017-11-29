@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bot_generator.h" />
+    <ClInclude Include="client.h" />
+    <ClInclude Include="dependency.h" />
+    <ClInclude Include="player.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bot_generator.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="player.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D68E3467-A36C-461C-ADC4-40F587E607CE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -141,8 +152,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
