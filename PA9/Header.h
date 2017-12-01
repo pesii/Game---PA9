@@ -6,6 +6,8 @@ using std::cout;
 using std::endl;
 
 
+
+
 class Player: public sf::RectangleShape {
 public:
 	Player(sf::Color const &newColor, sf::Vector2f const &size, sf::Vector2f const &pos);
@@ -23,6 +25,13 @@ public:
 
 private:
 
+};
 
+class Game {
+public:
+	Game();
+	void runGame();
+	void moveProjectiles(Projectile &projectile1, Projectile &projectile2, Projectile &projectile3, Projectile &projectile4, Projectile &projectile5, Projectile &projectile6, Projectile &projectile7, Projectile &projectile8, Projectile &projectile9, Projectile &projectile10);
+	void checkProjectiles(Projectile &projectile1, Projectile &projectile2, Projectile &projectile3, Projectile &projectile4, Projectile &projectile5, Projectile &projectile6, Projectile &projectile7, Projectile &projectile8, Projectile &projectile9, Projectile &projectile10);
 
 };
