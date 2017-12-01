@@ -1,3 +1,26 @@
 ﻿  Main.cpp
-  PA9.vcxproj -> E:\Files\school\Cpts122\PA9\Debug\PA9.exe
-  PA9.vcxproj -> E:\Files\school\Cpts122\PA9\Debug\PA9.pdb (Full PDB)
+f:\files\git repos\game---pa9\pa9\main.cpp(7): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+f:\files\git repos\game---pa9\pa9\main.cpp(64): warning C4305: 'argument': truncation from 'double' to 'float'
+f:\files\git repos\game---pa9\pa9\main.cpp(67): warning C4305: 'argument': truncation from 'double' to 'float'
+f:\files\git repos\game---pa9\pa9\main.cpp(71): warning C4804: '>': unsafe use of type 'bool' in operation
+f:\files\git repos\game---pa9\pa9\main.cpp(74): warning C4804: '>': unsafe use of type 'bool' in operation
+f:\files\git repos\game---pa9\pa9\main.cpp(77): warning C4804: '>': unsafe use of type 'bool' in operation
+f:\files\git repos\game---pa9\pa9\main.cpp(80): warning C4804: '>': unsafe use of type 'bool' in operation
+f:\files\git repos\game---pa9\pa9\main.cpp(83): warning C4804: '>': unsafe use of type 'bool' in operation
+f:\files\git repos\game---pa9\pa9\main.cpp(86): warning C4804: '>': unsafe use of type 'bool' in operation
+f:\files\git repos\game---pa9\pa9\main.cpp(89): warning C4804: '>': unsafe use of type 'bool' in operation
+f:\files\git repos\game---pa9\pa9\main.cpp(92): warning C4804: '>': unsafe use of type 'bool' in operation
+f:\files\git repos\game---pa9\pa9\main.cpp(95): warning C4804: '>': unsafe use of type 'bool' in operation
+f:\files\git repos\game---pa9\pa9\main.cpp(98): warning C4804: '>': unsafe use of type 'bool' in operation
+f:\files\git repos\game---pa9\pa9\main.cpp(106): warning C4305: 'argument': truncation from 'double' to 'float'
+f:\files\git repos\game---pa9\pa9\main.cpp(109): warning C4305: 'argument': truncation from 'double' to 'float'
+f:\files\git repos\game---pa9\pa9\main.cpp(112): warning C4305: 'argument': truncation from 'double' to 'float'
+f:\files\git repos\game---pa9\pa9\main.cpp(115): warning C4305: 'argument': truncation from 'double' to 'float'
+f:\files\git repos\game---pa9\pa9\main.cpp(118): warning C4305: 'argument': truncation from 'double' to 'float'
+f:\files\git repos\game---pa9\pa9\main.cpp(121): warning C4305: 'argument': truncation from 'double' to 'float'
+f:\files\git repos\game---pa9\pa9\main.cpp(124): warning C4305: 'argument': truncation from 'double' to 'float'
+f:\files\git repos\game---pa9\pa9\main.cpp(127): warning C4305: 'argument': truncation from 'double' to 'float'
+f:\files\git repos\game---pa9\pa9\main.cpp(130): warning C4305: 'argument': truncation from 'double' to 'float'
+f:\files\git repos\game---pa9\pa9\main.cpp(133): warning C4305: 'argument': truncation from 'double' to 'float'
+  PA9.vcxproj -> F:\Files\Git Repos\Game---PA9\Debug\PA9.exe
+  PA9.vcxproj -> F:\Files\Git Repos\Game---PA9\Debug\PA9.pdb (Full PDB)
