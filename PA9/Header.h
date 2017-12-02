@@ -1,5 +1,6 @@
+#pragma once
+
 #include <SFML/Graphics.hpp>
-#include <iostream>
 #include <vector>
 
 #define SCREEN_WIDTH 720
@@ -9,7 +10,6 @@
 #define ENEMY_WIDTH 30
 #define ENEMY_HEIGHT 20
 
-using namespace std;
 
 
 class Player: public sf::RectangleShape {
