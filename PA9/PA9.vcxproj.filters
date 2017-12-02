@@ -32,9 +32,6 @@
     <ClInclude Include="Header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Definintions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="standard_dependency.h">
       <Filter>Header Files</Filter>
     </ClInclude>

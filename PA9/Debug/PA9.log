@@ -1,20 +1,10 @@
-﻿Build started 12/1/2017 5:51:33 PM.
-     1>Project "C:\Users\Derek\Source\Repos\Game---PA9\PA9\PA9.vcxproj" on node 2 (Build target(s)).
-     1>InitializeBuildStatus:
-         Touching "Debug\PA9.tlog\unsuccessfulbuild".
-       ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp Main.cpp Player.cpp Projectile.cpp
-         Projectile.cpp
-     1>c:\users\derek\source\repos\game---pa9\pa9\header.h(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
-         Player.cpp
-     1>c:\users\derek\source\repos\game---pa9\pa9\header.h(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
-         Main.cpp
-     1>c:\users\derek\source\repos\game---pa9\pa9\header.h(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
-         Game.cpp
-     1>c:\users\derek\source\repos\game---pa9\pa9\header.h(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
-         Generating Code...
-     1>Done Building Project "C:\Users\Derek\Source\Repos\Game---PA9\PA9\PA9.vcxproj" (Build target(s)) -- FAILED.
-
-Build FAILED.
-
-Time Elapsed 00:00:00.83
+﻿  Projectile.cpp
+  Game.cpp
+f:\files\git repos\game---pa9\pa9\game.cpp(88): warning C4018: '<': signed/unsigned mismatch
+f:\files\git repos\game---pa9\pa9\game.cpp(106): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Player.cpp
+  Main.cpp
+  PA9.vcxproj -> F:\Files\Git Repos\Game---PA9\Debug\PA9.exe
+  PA9.vcxproj -> F:\Files\Git Repos\Game---PA9\Debug\PA9.pdb (Full PDB)
