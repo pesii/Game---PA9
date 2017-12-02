@@ -2,9 +2,9 @@
 
 ### Developed for CPTS 122
 ### Team
-...Derek N.
-...Jacob J.
-...Kostya S.
-...Pesi T.
+  Derek N.
+  Jacob J.
+  Kostya S.
+  Pesi T.
 
 ## Summary under construction
