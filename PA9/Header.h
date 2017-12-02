@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 using std::cout;
@@ -18,6 +19,7 @@ private:
 
 class Projectile: public sf::CircleShape {
 public:
+	Projectile();
 	Projectile(const sf::Color & color, const float & radius, const sf::Vector2f & position);
 	void Load(const sf::Color & color, const float & radius, const sf::Vector2f & position);
 	void Destroy();
@@ -31,7 +33,6 @@ class Game {
 public:
 	Game();
 	void runGame();
-	void moveProjectiles(Projectile &projectile1, Projectile &projectile2, Projectile &projectile3, Projectile &projectile4, Projectile &projectile5, Projectile &projectile6, Projectile &projectile7, Projectile &projectile8, Projectile &projectile9, Projectile &projectile10);
-	void checkProjectiles(Projectile &projectile1, Projectile &projectile2, Projectile &projectile3, Projectile &projectile4, Projectile &projectile5, Projectile &projectile6, Projectile &projectile7, Projectile &projectile8, Projectile &projectile9, Projectile &projectile10);
+	void moveProjectiles(vector<Projectile*> &projectiles);
 
 };
