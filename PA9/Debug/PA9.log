@@ -1,7 +1,7 @@
-﻿Build started 12/1/2017 5:21:02 PM.
+﻿Build started 12/1/2017 5:51:33 PM.
      1>Project "C:\Users\Derek\Source\Repos\Game---PA9\PA9\PA9.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
-         Creating "Debug\PA9.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "Debug\PA9.tlog\unsuccessfulbuild".
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp Main.cpp Player.cpp Projectile.cpp
          Projectile.cpp
@@ -17,4 +17,4 @@
 
 Build FAILED.
 
-Time Elapsed 00:00:00.89
+Time Elapsed 00:00:00.83
