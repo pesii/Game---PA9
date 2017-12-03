@@ -1,4 +1,4 @@
-#include "Header.h"
+#include "Projectile.h"
 
 Projectile::Projectile() {
 	this->setFillColor(sf::Color::Green);

@@ -1,4 +1,7 @@
-﻿  Game.cpp
+﻿  Projectile.cpp
+  Player.cpp
+  Main.cpp
+  Game.cpp
 c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(14): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
 c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(72): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(75): warning C4305: 'argument': truncation from 'double' to 'float'
@@ -10,11 +13,6 @@ c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(113): warning C430
 c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(114): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(8): warning C4101: 'realtime': unreferenced local variable
 c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(121): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  Compiling...
-  Projectile.cpp
-  Player.cpp
-  Main.cpp
   Generating Code...
   PA9.vcxproj -> C:\Users\pesi\GitHub\Offline Projects\Game - PA9\Debug\PA9.exe
   PA9.vcxproj -> C:\Users\pesi\GitHub\Offline Projects\Game - PA9\Debug\PA9.pdb (Full PDB)

@@ -156,7 +156,11 @@
     <ClCompile Include="Projectile.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="SpawnObjects.h" />
+    <ClInclude Include="Projectile.h" />
     <ClInclude Include="standard_dependency.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
