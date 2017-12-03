@@ -6,6 +6,7 @@ class CreditsState : public State
 {
 public:
    CreditsState(StateManager * gameStateManager);
+   ~CreditsState() {}
 
    void Init();
    void Update();

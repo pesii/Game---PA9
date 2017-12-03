@@ -69,7 +69,7 @@ void SplashState::HandleInput()
 
          if (event.type == sf::Event::KeyPressed)
          {
-            gameStates->RemoveState();
+            // Go to main menu
             gameStates->AddState(new MenuState(gameStates));
             gameStates->window.close();
          }

@@ -29,7 +29,9 @@ void StateManager::RemoveState()
 {
    if (!allStates.empty())
    {
+      //State * delState = allStates.top();
       allStates.pop();
+      //delete delState;
    }
 
    if (!allStates.empty())
