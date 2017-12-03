@@ -1,19 +1,21 @@
-﻿Build started 12/2/2017 5:45:53 PM.
+﻿Build started 12/3/2017 2:29:45 PM.
      1>Project "C:\Users\Derek\Source\Repos\Game---PA9\PA9\PA9.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\PA9.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt CreditsState.cpp
-         CreditsState.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt InstructionsState.cpp
+         InstructionsState.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.exe" /INCREMENTAL /NOLOGO "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.lib" /MACHINE:X86 Debug\AssetManager.obj
          Debug\CreditsState.obj
          Debug\Game.obj
+         Debug\InstructionsState.obj
          Debug\Main.obj
          Debug\MenuState.obj
          Debug\MenuSystemTest.obj
          Debug\Player.obj
          Debug\Projectile.obj
+         Debug\SplashState.obj
          Debug\StateManager.obj
          PA9.vcxproj -> C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.exe
          PA9.vcxproj -> C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.pdb (Full PDB)
@@ -24,4 +26,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.02
+Time Elapsed 00:00:01.19

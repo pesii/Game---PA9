@@ -1,5 +1,6 @@
 #include "MenuState.h"
 #include "CreditsState.h"
+#include "InstructionsState.h"
 #include "standard_dependency.h"
 
 MenuState::MenuState(StateManager * gameStateManager)
@@ -52,11 +53,7 @@ void MenuState::Init()
    option3.setOutlineColor(sf::Color::Blue);
    option3.setOutlineThickness(7);
 
-   // Update Window
-   gameStates->window.create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Menu", sf::Style::Close | sf::Style::Titlebar);
-
    Draw();
-
 
 }
 
@@ -113,7 +110,7 @@ void MenuState::HandleInput()
                else if (menu_selection == 2)
                {
                   // display instructions
-                  menu_selection = 0;
+                  gameStates->AddState(new InstructionsState(gameStates), false);
                }
                else if (menu_selection == 1)
                {

@@ -151,11 +151,13 @@
     <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="CreditsState.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="InstructionsState.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="MenuSystemTest.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="SplashState.cpp" />
     <ClCompile Include="StateManager.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -163,8 +165,10 @@
     <ClInclude Include="CreditsState.h" />
     <ClInclude Include="Definintions.h" />
     <ClInclude Include="Header.h" />
+    <ClInclude Include="InstructionsState.h" />
     <ClInclude Include="MenuState.h" />
     <ClInclude Include="MenuSystemTest.h" />
+    <ClInclude Include="SplashState.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateManager.h" />
   </ItemGroup>

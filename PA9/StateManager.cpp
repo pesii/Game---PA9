@@ -2,7 +2,8 @@
 
 StateManager::StateManager()
 {
-   
+   // Update Window
+   window.create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Menu", sf::Style::Close | sf::Style::Titlebar);
 
 }
 
@@ -31,7 +32,10 @@ void StateManager::RemoveState()
       allStates.pop();
    }
 
-   allStates.top()->Update();
+   if (!allStates.empty())
+   {
+      allStates.top()->Update();
+   }
 }
 
 State * StateManager::GetActiveState()
