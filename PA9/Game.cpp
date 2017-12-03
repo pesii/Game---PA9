@@ -1,6 +1,4 @@
 #include "Header.h"
-
-using std::vector;
  
 Game::Game() {
 	runGame();
@@ -10,11 +8,20 @@ void Game::runGame() {
 	sf::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "In Development");
 
 	Player thePlayer(sf::Color::Green, sf::Vector2f(PLAYER_WIDTH, PLAYER_HEIGHT), sf::Vector2f(0, SCREEN_HEIGHT - PLAYER_HEIGHT));
-	//Player enemy(sf::Color::Red, sf::Vector2f(30, 30), sf::Vector2f(window.getSize().y / 2, window.getSize().y / 2));
+	Player enemy(sf::Color::Red, sf::Vector2f(30, 30), sf::Vector2f(window.getSize().y / 2, window.getSize().y / 2));
+	enemy1(sf::Color::Red, sf::Vector2f(30,20), sf::Vector2f(0, 0));
+	Enemies enemy2(sf::Color::Cyan, sf::Vector2f(30, 20), sf::Vector2f(200, 0));
+	Enemies enemy3(sf::Color::Green, sf::Vector2f(30, 20), sf::Vector2f(100, 0));
+	Enemies enemy4(sf::Color::White, sf::Vector2f(30, 20), sf::Vector2f(400, 0));
+	Enemies enemy5(sf::Color::Yellow, sf::Vector2f(30, 20), sf::Vector2f(500, 0));
 
 	vector<Projectile*> projectiles;
+	//vector<Enemies*> enemies;
 
-	//sf::FloatRect enemyHitbox;
+	time_t realtime;
+	long int last_time = 0;
+
+	sf::FloatRect enemyHitbox;
 
 	bool leftisPressed = false;
 	bool rightisPressed = false;
@@ -22,6 +29,7 @@ void Game::runGame() {
 
 	while (window.isOpen())
 	{
+
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
@@ -60,13 +68,13 @@ void Game::runGame() {
 		}
 
 		if (leftisPressed == true) {
-			thePlayer.move(-1, 0);
+			thePlayer.move(-0.2, 0);
 		}
 		if (rightisPressed == true) {
-			thePlayer.move(1, 0);
+			thePlayer.move(0.2, 0);
 		}
 		if (fireKeyPressed == true) {
-			cout << "Fire key pressed!\n";
+		//	cout << "Fire key pressed!\n";
 			Projectile* p1 = new Projectile(sf::Color::Red, 5, thePlayer.getPosition());
 			projectiles.push_back(p1);
 			fireKeyPressed = false;
@@ -77,7 +85,7 @@ void Game::runGame() {
 		window.clear();
 
 		window.draw(thePlayer);
-		//window.draw(enemy);
+		window.draw(enemy);
 
 		//this loop checks if there is anything in the projectiles vector, and draws them
 		if (projectiles.size() > 0) {
@@ -85,6 +93,11 @@ void Game::runGame() {
 				window.draw(*projectiles.at(i));
 			}
 		}
+		window.draw(enemy1);
+		window.draw(enemy2);
+		window.draw(enemy3);
+		window.draw(enemy4);
+		window.draw(enemy5);
 
 		//enemyHitbox = enemy.getGlobalBounds();
 	/*	if (enemyHitbox.contains(projectile1.getPosition()) || enemyHitbox.contains(projectile2.getPosition()) || enemyHitbox.contains(projectile3.getPosition()) || enemyHitbox.contains(projectile4.getPosition()) || enemyHitbox.contains(projectile5.getPosition()) || enemyHitbox.contains(projectile6.getPosition()) || enemyHitbox.contains(projectile7.getPosition()) || enemyHitbox.contains(projectile8.getPosition()) || enemyHitbox.contains(projectile9.getPosition()) || enemyHitbox.contains(projectile10.getPosition())) {
@@ -92,6 +105,12 @@ void Game::runGame() {
 		}*/
 
 		window.display();
+
+		enemy1.move(sf::Vector2f(0, ENEMY_SPEED));
+		enemy2.move(sf::Vector2f(0, ENEMY_SPEED));
+		enemy3.move(sf::Vector2f(0, ENEMY_SPEED));
+		enemy4.move(sf::Vector2f(0, ENEMY_SPEED));
+		enemy5.move(sf::Vector2f(0, ENEMY_SPEED));
 
 		//cout << "Player coords: " << thePlayer.getPosition().x << ", " << thePlayer.getPosition().y << "\n";
 	}

@@ -1,7 +1,7 @@
 #pragma once
 
+#include "standard_dependency.h"
 #include <SFML/Graphics.hpp>
-#include <vector>
 
 #define SCREEN_WIDTH 720
 #define SCREEN_HEIGHT 900
@@ -9,6 +9,7 @@
 #define PLAYER_HEIGHT 20
 #define ENEMY_WIDTH 30
 #define ENEMY_HEIGHT 20
+#define ENEMY_SPEED 0.125
 
 
 
@@ -28,6 +29,30 @@ public:
 
 private:
 
+};
+
+class Enemies : public sf::RectangleShape {
+public:
+	Enemies(sf::Color const &newColor, sf::Vector2f const &size, sf::Vector2f const &pos)
+	{
+		this->setFillColor(newColor);
+		this->setSize(size);
+		this->setPosition(pos);
+	}
+
+	void setColor(sf::Color const &new_color) {
+		setFillColor(new_color);
+	}
+	/*
+	void setSize(string size) {
+		setSize(size);
+	}
+	*/
+
+	/*
+	Enemies Spawn(sf::Color const enemy_color, double enemy_size_x, double enemy_size_y,
+		double enemy_coord_x, double enemy_coord_y);
+		*/
 };
 
 class Game {
