@@ -1,20 +1,27 @@
-﻿Build started 12/1/2017 5:51:33 PM.
+﻿Build started 12/2/2017 5:45:53 PM.
      1>Project "C:\Users\Derek\Source\Repos\Game---PA9\PA9\PA9.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\PA9.tlog\unsuccessfulbuild".
+         Creating "Debug\PA9.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp Main.cpp Player.cpp Projectile.cpp
-         Projectile.cpp
-     1>c:\users\derek\source\repos\game---pa9\pa9\header.h(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
-         Player.cpp
-     1>c:\users\derek\source\repos\game---pa9\pa9\header.h(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
-         Main.cpp
-     1>c:\users\derek\source\repos\game---pa9\pa9\header.h(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
-         Game.cpp
-     1>c:\users\derek\source\repos\game---pa9\pa9\header.h(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
-         Generating Code...
-     1>Done Building Project "C:\Users\Derek\Source\Repos\Game---PA9\PA9\PA9.vcxproj" (Build target(s)) -- FAILED.
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt CreditsState.cpp
+         CreditsState.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.exe" /INCREMENTAL /NOLOGO "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.lib" /MACHINE:X86 Debug\AssetManager.obj
+         Debug\CreditsState.obj
+         Debug\Game.obj
+         Debug\Main.obj
+         Debug\MenuState.obj
+         Debug\MenuSystemTest.obj
+         Debug\Player.obj
+         Debug\Projectile.obj
+         Debug\StateManager.obj
+         PA9.vcxproj -> C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.exe
+         PA9.vcxproj -> C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.pdb (Full PDB)
+       FinalizeBuildStatus:
+         Deleting file "Debug\PA9.tlog\unsuccessfulbuild".
+         Touching "Debug\PA9.tlog\PA9.lastbuildstate".
+     1>Done Building Project "C:\Users\Derek\Source\Repos\Game---PA9\PA9\PA9.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.83
+Time Elapsed 00:00:01.02
