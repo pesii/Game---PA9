@@ -5,21 +5,22 @@ Game::Game() {
 }
 
 void Game::runGame() {
+	time_t realtime;
+	long int last_time = 0;
+
 	sf::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "In Development");
 
 	Player thePlayer(sf::Color::Green, sf::Vector2f(PLAYER_WIDTH, PLAYER_HEIGHT), sf::Vector2f(0, SCREEN_HEIGHT - PLAYER_HEIGHT));
 	Player enemy(sf::Color::Red, sf::Vector2f(30, 30), sf::Vector2f(window.getSize().y / 2, window.getSize().y / 2));
-	enemy1(sf::Color::Red, sf::Vector2f(30,20), sf::Vector2f(0, 0));
-	Enemies enemy2(sf::Color::Cyan, sf::Vector2f(30, 20), sf::Vector2f(200, 0));
-	Enemies enemy3(sf::Color::Green, sf::Vector2f(30, 20), sf::Vector2f(100, 0));
-	Enemies enemy4(sf::Color::White, sf::Vector2f(30, 20), sf::Vector2f(400, 0));
-	Enemies enemy5(sf::Color::Yellow, sf::Vector2f(30, 20), sf::Vector2f(500, 0));
+	
+	Enemy enemy1(sf::Color::Red, sf::Vector2f(30,20), sf::Vector2f(0, 0));
+	Enemy enemy2(sf::Color::Cyan, sf::Vector2f(30, 20), sf::Vector2f(200, 0));
+	Enemy enemy3(sf::Color::Green, sf::Vector2f(30, 20), sf::Vector2f(100, 0));
+	Enemy enemy4(sf::Color::White, sf::Vector2f(30, 20), sf::Vector2f(400, 0));
+	Enemy enemy5(sf::Color::Yellow, sf::Vector2f(30, 20), sf::Vector2f(500, 0));
 
-	vector<Projectile*> projectiles;
-	//vector<Enemies*> enemies;
-
-	time_t realtime;
-	long int last_time = 0;
+ 	vector<Projectile*> projectiles;
+	//vector<Enemy*> enemies;
 
 	sf::FloatRect enemyHitbox;
 
@@ -119,8 +120,12 @@ void Game::runGame() {
 void Game::moveProjectiles(vector<Projectile*> &projectiles){
 	for (int i = 0; i < projectiles.size(); i++) {
 		projectiles.at(i)->move(0, -1);
+		
 		//this checks if the projectile moved past the screen, if so, de-allocate the object and remove from vector
-		if (projectiles.at(i)->getPosition().y > SCREEN_HEIGHT) {
+		cout << projectiles.at(i)->getPosition().y << endl;
+		
+		if (projectiles.at(i)->getPosition().y < SCREEN_HEIGHT) {
+			cout << "Deleted projectile!" << endl;
 			delete projectiles.at(i);
 			projectiles.erase(projectiles.begin());
 		}
