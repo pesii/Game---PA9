@@ -80,7 +80,7 @@ void Game::runGame() {
 			projectiles.push_back(p1);
 			fireKeyPressed = false;
 		}
-
+		
 		moveProjectiles(projectiles);
 
 		window.clear();
@@ -101,9 +101,9 @@ void Game::runGame() {
 		window.draw(enemy5);
 
 		//enemyHitbox = enemy.getGlobalBounds();
-	/*	if (enemyHitbox.contains(projectile1.getPosition()) || enemyHitbox.contains(projectile2.getPosition()) || enemyHitbox.contains(projectile3.getPosition()) || enemyHitbox.contains(projectile4.getPosition()) || enemyHitbox.contains(projectile5.getPosition()) || enemyHitbox.contains(projectile6.getPosition()) || enemyHitbox.contains(projectile7.getPosition()) || enemyHitbox.contains(projectile8.getPosition()) || enemyHitbox.contains(projectile9.getPosition()) || enemyHitbox.contains(projectile10.getPosition())) {
-			cout << "Projectile hit enemy\n";
-		}*/
+		//if (enemyHitbox.contains(projectile.at(i).getPosition()) || enemyHitbox.contains(projectile2.getPosition()) || enemyHitbox.contains(projectile3.getPosition()) || enemyHitbox.contains(projectile4.getPosition()) || enemyHitbox.contains(projectile5.getPosition()) || enemyHitbox.contains(projectile6.getPosition()) || enemyHitbox.contains(projectile7.getPosition()) || enemyHitbox.contains(projectile8.getPosition()) || enemyHitbox.contains(projectile9.getPosition()) || enemyHitbox.contains(projectile10.getPosition())) {
+		//	cout << "Projectile hit enemy\n";
+		//}
 
 		window.display();
 
@@ -122,9 +122,7 @@ void Game::moveProjectiles(vector<Projectile*> &projectiles){
 		projectiles.at(i)->move(0, -1);
 		
 		//this checks if the projectile moved past the screen, if so, de-allocate the object and remove from vector
-		cout << projectiles.at(i)->getPosition().y << endl;
-		
-		if (projectiles.at(i)->getPosition().y < SCREEN_HEIGHT) {
+		if (projectiles.at(i)->getPosition().y < ORIGIN) {
 			cout << "Deleted projectile!" << endl;
 			delete projectiles.at(i);
 			projectiles.erase(projectiles.begin());

@@ -13,6 +13,7 @@
 #define ENEMY_WIDTH 30
 #define ENEMY_HEIGHT 20
 #define ENEMY_SPEED 0.0125
+#define ORIGIN 0
 
 
 class SpawnObject : public sf::RectangleShape {
@@ -78,7 +79,7 @@ public:
 class Projectile: public sf::CircleShape {
 public:
 	Projectile();
-	Projectile(const sf::Color & color, const float & radius, const sf::Vector2f & position);
+	Projectile(const sf::Color &color, const float &radius, const sf::Vector2f &position);
 
 
 private:
