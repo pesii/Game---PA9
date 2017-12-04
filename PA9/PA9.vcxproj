@@ -163,12 +163,16 @@
   <ItemGroup>
     <ClInclude Include="AssetManager.h" />
     <ClInclude Include="CreditsState.h" />
-    <ClInclude Include="Definintions.h" />
-    <ClInclude Include="Header.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="InstructionsState.h" />
     <ClInclude Include="MenuState.h" />
     <ClInclude Include="MenuSystemTest.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="SpawnObjects.h" />
     <ClInclude Include="SplashState.h" />
+    <ClInclude Include="standard_dependency.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateManager.h" />
   </ItemGroup>
