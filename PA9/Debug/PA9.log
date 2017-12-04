@@ -1,18 +1,37 @@
-﻿  Projectile.cpp
-  Player.cpp
-  Main.cpp
-  Game.cpp
-c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(14): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(72): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(75): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(93): warning C4018: '<': signed/unsigned mismatch
-c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(110): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(111): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(112): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(113): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(114): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(8): warning C4101: 'realtime': unreferenced local variable
-c:\users\pesi\github\offline projects\game - pa9\pa9\game.cpp(121): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  PA9.vcxproj -> C:\Users\pesi\GitHub\Offline Projects\Game - PA9\Debug\PA9.exe
-  PA9.vcxproj -> C:\Users\pesi\GitHub\Offline Projects\Game - PA9\Debug\PA9.pdb (Full PDB)
+﻿Build started 12/3/2017 3:38:44 PM.
+     1>Project "C:\Users\Derek\Source\Repos\Game---PA9\PA9\PA9.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\PA9.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp MenuState.cpp MenuSystemTest.cpp SplashState.cpp
+         Main.cpp
+         Generating Code...
+         Compiling...
+         SplashState.cpp
+         MenuSystemTest.cpp
+         MenuState.cpp
+     1>c:\users\derek\source\repos\game---pa9\pa9\menustate.cpp(92): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\derek\source\repos\game---pa9\pa9\menustate.cpp(98): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.exe" /INCREMENTAL /NOLOGO "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.lib" /MACHINE:X86 Debug\AssetManager.obj
+         Debug\CreditsState.obj
+         Debug\Game.obj
+         Debug\InstructionsState.obj
+         Debug\Main.obj
+         Debug\MenuState.obj
+         Debug\MenuSystemTest.obj
+         Debug\Player.obj
+         Debug\Projectile.obj
+         Debug\SplashState.obj
+         Debug\StateManager.obj
+         PA9.vcxproj -> C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.exe
+         PA9.vcxproj -> C:\Users\Derek\Source\Repos\Game---PA9\Debug\PA9.pdb (Full PDB)
+       FinalizeBuildStatus:
+         Deleting file "Debug\PA9.tlog\unsuccessfulbuild".
+         Touching "Debug\PA9.tlog\PA9.lastbuildstate".
+     1>Done Building Project "C:\Users\Derek\Source\Repos\Game---PA9\PA9\PA9.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.47
