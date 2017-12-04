@@ -1,15 +1,8 @@
-#include "standard_dependency.h"
-#include "MenuSystemTest.h"
+#include "Game.h"
 
 int main()
 {
-   
-   //Game newGame;
-   MenuSystemTest game;
-
-
-   game.RunMenu();
-
-   // test push
+	Game newGame;
+	SpawnObject j;
 	return 0;
 }
