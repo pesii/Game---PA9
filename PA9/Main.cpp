@@ -3,6 +3,7 @@
 int main()
 {
 	Game newGame;
-	SpawnObject j;
+	//SpawnObject j;
+   newGame.runGame();
 	return 0;
 }
