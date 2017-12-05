@@ -4,10 +4,13 @@
 #include <iostream>
 using std::cout;
 using std::endl;
+using std::cin;
 using std::string;
 
 #include <vector>
 using std::vector;
+
+#include <stack>
 
 // time 
 #include <ctime>
@@ -26,3 +29,6 @@ using std::vector;
 #define ENEMY_HEIGHT 20
 #define ENEMY_SPEED 0.0125
 #define ORIGIN 0
+
+#define MENU_STATE_BACKGROUND_FILEPATH  "Jupiter1.jpg"
+#define MENU_FONT "space_invaders.ttf"
