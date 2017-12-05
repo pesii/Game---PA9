@@ -4,7 +4,9 @@
 
 class Enemy : public SpawnObject {
 public:
-	Enemy(sf::Color const &newColor, sf::Vector2f const &size, sf::Vector2f const &pos)
+	Enemy(sf::Color const &newColor = sf::Color::Red, 
+      sf::Vector2f const &size = sf::Vector2f(30, 30), 
+      sf::Vector2f const &pos = sf::Vector2f(SCREEN_HEIGHT / 2, SCREEN_HEIGHT / 2))
 		: SpawnObject(newColor, size, pos) {
 		cout << "Inside player constructor!" << endl;
 	}

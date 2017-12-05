@@ -156,6 +156,7 @@
     <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="MenuSystemTest.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayState.cpp" />
     <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="SplashState.cpp" />
     <ClCompile Include="StateManager.cpp" />
@@ -164,10 +165,16 @@
     <ClInclude Include="AssetManager.h" />
     <ClInclude Include="CreditsState.h" />
     <ClInclude Include="Definintions.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="InstructionsState.h" />
     <ClInclude Include="MenuState.h" />
     <ClInclude Include="MenuSystemTest.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayState.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="SpawnObjects.h" />
     <ClInclude Include="SplashState.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateManager.h" />

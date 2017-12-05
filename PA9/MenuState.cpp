@@ -1,6 +1,7 @@
 #include "MenuState.h"
 #include "CreditsState.h"
 #include "InstructionsState.h"
+#include "PlayState.h"
 #include "standard_dependency.h"
 
 MenuState::MenuState(StateManager * gameStateManager)
@@ -105,7 +106,8 @@ void MenuState::HandleInput()
                if (menu_selection == 3)
                {
                   // enter game
-                  menu_selection = 0;
+                  //menu_selection = 0;
+                  gameStates->AddState(new PlayState(gameStates), false);
                }
                else if (menu_selection == 2)
                {
