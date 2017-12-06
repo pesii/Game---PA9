@@ -1,4 +1,12 @@
-#pragma once
+/*
+* Programmers: Jacob J, Derek N, Konstantin S, Pesi T
+* Class: CptS 122
+* Programming Assignment: PA9
+* Date: 06/12/2017
+* Description:
+*/
+#ifndef SPLASHSTATE_H
+#define SPLASHSTATE_H
 
 #include "State.h"
 #include "standard_dependency.h"
@@ -24,3 +32,5 @@ private:
    sf::Text SplashText1, SplashText2, SplashText3, SplashText4;
 
 };
+
+#endif

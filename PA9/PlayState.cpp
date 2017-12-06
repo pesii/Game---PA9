@@ -1,3 +1,10 @@
+/*
+* Programmers: Jacob J, Derek N, Konstantin S, Pesi T
+* Class: CptS 122
+* Programming Assignment: PA9
+* Date: 06/12/2017
+* Description:
+*/
 #include "PlayState.h"
 
 PlayState::PlayState(StateManager * gameStateManager)
@@ -119,8 +126,8 @@ void PlayState::HandleInput()
          projectiles.push_back(p1);
          fireKeyPressed = false;
       }
-
       moveProjectiles(projectiles);
+	  Draw();
    }
 }
 

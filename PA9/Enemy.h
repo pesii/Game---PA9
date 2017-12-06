@@ -1,5 +1,12 @@
-#pragma once
-
+/*
+* Programmers: Jacob J, Derek N, Konstantin S, Pesi T
+* Class: CptS 122
+* Programming Assignment: PA9
+* Date: 06/12/2017
+* Description:
+*/
+#ifndef ENEMY_H
+#define ENEMY_H
 #include "SpawnObjects.h"
 
 class Enemy : public SpawnObject {
@@ -26,3 +33,4 @@ public:
 		double enemy_coord_x, double enemy_coord_y);
 		*/
 };
+#endif

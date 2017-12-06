@@ -1,4 +1,12 @@
-#pragma once
+/*
+* Programmers: Jacob J, Derek N, Konstantin S, Pesi T
+* Class: CptS 122
+* Programming Assignment: PA9
+* Date: 06/12/2017
+* Description:
+*/
+#ifndef STATEMANAGER_H
+#define STATEMANAGER_H
 
 #include <stack>
 #include "State.h"
@@ -26,3 +34,4 @@ private:
    bool isReplacing;
    bool isRemoving;
 };
+#endif
