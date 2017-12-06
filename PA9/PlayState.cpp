@@ -20,10 +20,10 @@ void PlayState::Init()
    thePlayer.setPosition(sf::Vector2f(0, SCREEN_HEIGHT - PLAYER_HEIGHT));
 
    // Spawn Enemy Wave
-   for (int i = 0; i < 6; i++)
+   for (int i = 0; i < 10; i++)
    {
       Enemy * e1 = new Enemy();
-      e1->setPosition(100 * i, 50 * i);
+      e1->setPosition(100 * i, 0);
       enemies.push_back(e1);
    }
 
@@ -132,15 +132,24 @@ void PlayState::HandleInput()
          if (time_accumulator - last_time >= 1)
          {
             //	cout << "Fire key pressed!\n";
+			 sf::Texture texture;
+			if(!texture.loadFromFile("Bullet.jpg")) {
+				cout << "Error loading texture!" << endl;	
+			} else {
+				cout << "Loaded texture" << endl;
+			}
+
             Projectile * p1 = new Projectile(sf::Color::Red, sf::Vector2f(10, 10), thePlayer.getPosition());
-            projectiles.push_back(p1);
+            p1->setTexture(&texture, true);
+			projectiles.push_back(p1);
+			projectiles.at(0)->setTexture(&texture);
+
             fireKeyPressed = false;
             last_time = time_accumulator;
          }
 
          fireKeyPressed = false;
       }
-
       // Check for projectile/enemy collision
       for (int i = 0; i < enemies.size(); i++)
       {
@@ -159,10 +168,20 @@ void PlayState::HandleInput()
             }
          }
       }
-
+	  //cout << gameStates->GetActiveState() << endl;
       moveProjectiles(projectiles);
       moveEnemies(enemies);
       Draw();
+
+	  if(enemies.size() == 0) {
+			PlayState::~PlayState();
+		  
+			//MenuState *temp;
+			//gameStates->AddState(temp);
+			gameStates->window.close();
+			MenuSystemTest test;
+			test.RunMenu();
+	  }
 
    }
 

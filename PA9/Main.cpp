@@ -13,10 +13,10 @@ int main()
 {
    
    //Game newGame;
-   MenuSystemTest game;
+   MenuSystemTest menu;
 
 
-   game.RunMenu();
+   menu.RunMenu();
 
    // test push
 	return 0;

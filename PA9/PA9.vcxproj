@@ -182,6 +182,7 @@
     <ClInclude Include="StateManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Bullet.jpg" />
     <Image Include="Jupiter1.jpg" />
   </ItemGroup>
   <ItemGroup>
