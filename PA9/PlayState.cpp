@@ -7,8 +7,8 @@ PlayState::PlayState(StateManager * gameStateManager)
 
 void PlayState::Init()
 {
-   //time_t realtime;
-   long int last_time = 0;
+   time_accumulator = time(0);
+   last_time = 0;
 
    //::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "In Development");
 
@@ -66,8 +66,11 @@ void PlayState::HandleInput()
 {
    while (gameStates->window.isOpen())
    {
+      time_accumulator = time(0);
+      //cout << time_accumulator << endl;
 
       sf::Event event;
+
       while (gameStates->window.pollEvent(event))
       {
          if (event.type == sf::Event::Closed)
@@ -113,15 +116,26 @@ void PlayState::HandleInput()
       if (rightisPressed == true) {
          thePlayer.move(0.2, 0);
       }
-      if (fireKeyPressed == true) {
-         //	cout << "Fire key pressed!\n";
-         Projectile* p1 = new Projectile(sf::Color::Red, 5, thePlayer.getPosition());
-         projectiles.push_back(p1);
+      if (fireKeyPressed == true)
+      {
+         if (time_accumulator - last_time >= 5)
+         {
+            //	cout << "Fire key pressed!\n";
+            Projectile * p1 = new Projectile(sf::Color::Red, 5, thePlayer.getPosition());
+            projectiles.push_back(p1);
+            fireKeyPressed = false;
+            last_time = time_accumulator;
+         }
+         
          fireKeyPressed = false;
       }
 
-      moveProjectiles(projectiles);
+
+   moveProjectiles(projectiles);
+   Draw();
+
    }
+
 }
 
 void PlayState::Draw()
