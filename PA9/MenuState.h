@@ -1,3 +1,13 @@
+/*
+* Programmers: Jacob J, Derek N, Konstantin S, Pesi T
+* Class: CptS 122
+* Programming Assignment: PA9
+* Date: 06/12/2017
+* Description:
+*/
+#ifndef MENUSTATE_H
+#define MENUSTATE_H
+
 #include "State.h"
 #include "standard_dependency.h"
 #include "StateManager.h"
@@ -25,5 +35,5 @@ private:
    sf::RectangleShape select_box;
    int select_pos;
    int select_positions[3];
-
 };
+#endif

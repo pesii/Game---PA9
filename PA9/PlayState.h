@@ -1,3 +1,13 @@
+/*
+* Programmers: Jacob J, Derek N, Konstantin S, Pesi T
+* Class: CptS 122
+* Programming Assignment: PA9
+* Date: 06/12/2017
+* Description:
+*/
+#ifndef PLAYSTATE_H
+#define PLAYSTATE_H
+
 #include "State.h"
 #include "standard_dependency.h"
 #include "StateManager.h"
@@ -30,3 +40,4 @@ private:
    time_t time_accumulator;
    long int last_time;
 };
+#endif
