@@ -27,7 +27,8 @@ public:
 
 private:
    void moveProjectiles(vector<Projectile*> &projectiles);
-   
+   void moveEnemies(vector<Enemy *>& enemies);
+
    StateManager * gameStates;
 
    Player thePlayer;
@@ -35,6 +36,7 @@ private:
    Enemy enemy1, enemy2, enemy3, enemy4, enemy5;
 
    vector<Projectile*> projectiles;
+   vector<Enemy*> enemies;
    sf::FloatRect enemyHitbox;
    bool leftisPressed, rightisPressed, fireKeyPressed;
    time_t time_accumulator;

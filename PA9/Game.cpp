@@ -83,8 +83,8 @@ void Game::runGame() {
 		}
 		if (fireKeyPressed == true) {
 		//	cout << "Fire key pressed!\n";
-			Projectile* p1 = new Projectile(sf::Color::Red, 5, thePlayer.getPosition());
-			projectiles.push_back(p1);
+			//Projectile* p1 = new Projectile(sf::Color::Red, 5, thePlayer.getPosition());
+			//projectiles.push_back(p1);
 			fireKeyPressed = false;
 		}
 		

@@ -9,13 +9,13 @@
 
 Projectile::Projectile() {
 	this->setFillColor(sf::Color::Green);
-	this->setRadius(5);
+	this->setSize(sf::Vector2f(5,10));
 	this->setPosition(sf::Vector2f(0,0));
 }
 
-Projectile::Projectile(const sf::Color & color, const float & radius, const sf::Vector2f & position) {
+Projectile::Projectile(const sf::Color & color, const sf::Vector2f &size, const sf::Vector2f & position) {
 	this->setFillColor(color);
-	this->setRadius(radius);
+	this->setSize(size);
 	this->setPosition(position);
 }
 

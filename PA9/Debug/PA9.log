@@ -1,17 +1,23 @@
-﻿Build started 12/5/2017 6:32:26 PM.
+﻿Build started 12/5/2017 7:47:15 PM.
      1>Project "C:\Users\Derek\Source\Repos\archive - Copy\Game---PA9\PA9\PA9.vcxproj" on node 2 (Build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\PA9.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt PlayState.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt PlayState.cpp
          PlayState.cpp
-     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(114): warning C4305: 'argument': truncation from 'double' to 'float'
-     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(117): warning C4305: 'argument': truncation from 'double' to 'float'
-     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(127): warning C4244: '=': conversion from 'time_t' to 'long', possible loss of data
+     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(125): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(128): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(138): warning C4244: '=': conversion from 'time_t' to 'long', possible loss of data
+     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(145): warning C4018: '<': signed/unsigned mismatch
      1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(149): warning C4018: '<': signed/unsigned mismatch
-     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(171): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(179): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(185): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(209): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(223): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\derek\source\repos\archive - copy\game---pa9\pa9\playstate.cpp(224): warning C4305: 'argument': truncation from 'double' to 'float'
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Derek\Source\Repos\archive - Copy\Game---PA9\Debug\PA9.exe" /INCREMENTAL /NOLOGO "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Derek\Source\Repos\archive - Copy\Game---PA9\Debug\PA9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Derek\Source\Repos\archive - Copy\Game---PA9\Debug\PA9.lib" /MACHINE:X86 Debug\AssetManager.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Derek\Source\Repos\archive - Copy\Game---PA9\Debug\PA9.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\SFML-2.4.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Derek\Source\Repos\archive - Copy\Game---PA9\Debug\PA9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Derek\Source\Repos\archive - Copy\Game---PA9\Debug\PA9.lib" /MACHINE:X86 Debug\AssetManager.obj
          Debug\CreditsState.obj
          Debug\Game.obj
          Debug\InstructionsState.obj
@@ -32,4 +38,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.19
+Time Elapsed 00:00:01.28

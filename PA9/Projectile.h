@@ -10,10 +10,10 @@
 
 #include "SpawnObjects.h"
 
-class Projectile: public sf::CircleShape {
+class Projectile: public sf::RectangleShape {
 public:
 	Projectile();
-	Projectile(const sf::Color &color, const float &radius, const sf::Vector2f &position);
+	Projectile(const sf::Color &color, const sf::Vector2f &size, const sf::Vector2f &position);
 
 
 private:

@@ -17,6 +17,8 @@ public:
 		: SpawnObject(newColor, size, pos) {
 		cout << "Inside player constructor!" << endl;
 	}
+
+   ~Enemy() {}
 	/*
 	void setColor(sf::Color const &new_color) {
 		setFillColor(new_color);
