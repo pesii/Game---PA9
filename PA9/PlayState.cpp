@@ -67,7 +67,6 @@ void PlayState::HandleInput()
    while (gameStates->window.isOpen())
    {
       time_accumulator = time(0);
-      //cout << time_accumulator << endl;
 
       sf::Event event;
 
@@ -118,7 +117,7 @@ void PlayState::HandleInput()
       }
       if (fireKeyPressed == true)
       {
-         if (time_accumulator - last_time >= 5)
+         if (time_accumulator - last_time >= 1)
          {
             //	cout << "Fire key pressed!\n";
             Projectile * p1 = new Projectile(sf::Color::Red, 5, thePlayer.getPosition());

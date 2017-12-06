@@ -37,4 +37,8 @@ private:
    vector<Projectile*> projectiles;
    sf::FloatRect enemyHitbox;
    bool leftisPressed, rightisPressed, fireKeyPressed;
+   time_t time_accumulator;
+   long int last_time;
 };
+
+#endif
