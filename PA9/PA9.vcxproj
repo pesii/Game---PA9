@@ -184,6 +184,7 @@
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="SpawnObjects.h" />
     <ClInclude Include="SplashState.h" />
+    <ClInclude Include="standard_dependency.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateManager.h" />
   </ItemGroup>
