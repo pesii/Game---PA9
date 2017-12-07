@@ -151,6 +151,7 @@ void MenuState::Draw()
    // Update Window
    gameStates->window.clear(sf::Color::Black);
 
+   // Update Background, option1, option2, option2, and select_box
    gameStates->window.draw(mBackground);
    gameStates->window.draw(option1);
    gameStates->window.draw(option2);

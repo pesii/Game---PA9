@@ -62,14 +62,6 @@ void PlayState::Init()
    winText.setOutlineColor(sf::Color::Blue);
    winText.setOutlineThickness(7);
 
-   //::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "In Development");
-
-   //Player thePlayer(sf::Color::Transparent, sf::Vector2f(PLAYER_WIDTH, PLAYER_HEIGHT), sf::Vector2f(0, SCREEN_HEIGHT - PLAYER_HEIGHT));
-   //Player enemy(sf::Color::Red, sf::Vector2f(30, 30), sf::Vector2f(gameStates->window.getSize().y / 2, gameStates->window.getSize().y / 2));
-
-   /*thePlayer.setFillColor(sf::Color::Transparent);
-   thePlayer.setSize(sf::Vector2f(PLAYER_WIDTH, PLAYER_HEIGHT));
-   thePlayer.setPosition(sf::Vector2f(0, SCREEN_HEIGHT - PLAYER_HEIGHT));*/
 
    // Spawn Enemy Wave
    for (int i = 0; i < 6; i++)
@@ -78,39 +70,6 @@ void PlayState::Init()
       e1->setPosition(100 * i, 50 * i);
       enemies.push_back(e1);
    }
-
-
-
-   //enemy1.setFillColor(sf::Color::Red);
-   //enemy1.setSize(sf::Vector2f(30, 20));
-   //enemy1.setPosition(sf::Vector2f(0, 0));
-
-   //enemy2.setFillColor(sf::Color::Cyan);
-   //enemy2.setSize(sf::Vector2f(30, 20));
-   //enemy2.setPosition(sf::Vector2f(200, 0));
-
-   //enemy3.setFillColor(sf::Color::Green);
-   //enemy3.setSize(sf::Vector2f(30, 20));
-   //enemy3.setPosition(sf::Vector2f(100, 0));
-
-   //enemy4.setFillColor(sf::Color::White);
-   //enemy4.setSize(sf::Vector2f(30, 20));
-   //enemy4.setPosition(sf::Vector2f(400, 0));
-
-   //enemy5.setFillColor(sf::Color::Yellow);
-   //enemy5.setSize(sf::Vector2f(30, 20));
-   //enemy5.setPosition(sf::Vector2f(500, 0));
-
-   //Enemy enemy1(sf::Color::Red, sf::Vector2f(30, 20), sf::Vector2f(0, 0));
-   //Enemy enemy2(sf::Color::Cyan, sf::Vector2f(30, 20), sf::Vector2f(200, 0));
-   //Enemy enemy3(sf::Color::Green, sf::Vector2f(30, 20), sf::Vector2f(100, 0));
-   //Enemy enemy4(sf::Color::White, sf::Vector2f(30, 20), sf::Vector2f(400, 0));
-   //Enemy enemy5(sf::Color::Yellow, sf::Vector2f(30, 20), sf::Vector2f(500, 0));
-
-   //vector<sf::Sprite*> projectiles;
-   //vector<Enemy*> enemies;
-
-   //sf::FloatRect enemyHitbox;
 
    bool isGameOver = false;
    bool leftisPressed = false;
