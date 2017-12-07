@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: CreditsState contains the functions for printing the credit to the screen
 */
 #include "CreditsState.h"
 
@@ -96,12 +96,11 @@ void CreditsState::Draw()
 
    // Update Window
    gameStates->window.clear(sf::Color::Black);
-
-   gameStates->window.draw(mBackground);
-   gameStates->window.draw(name1);
-   gameStates->window.draw(name2);
-   gameStates->window.draw(name3);
-   gameStates->window.draw(name4);
+   gameStates->window.draw(mBackground); // Update Background
+   gameStates->window.draw(name1); // Update name1
+   gameStates->window.draw(name2); // Update name2
+   gameStates->window.draw(name3); // Update name3
+   gameStates->window.draw(name4); // Update name4
 
    gameStates->window.display();
 }

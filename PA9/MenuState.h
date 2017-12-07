@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: MenuState contains the prototype for printing various states to the screen.
 */
 #ifndef MENUSTATE_H
 #define MENUSTATE_H

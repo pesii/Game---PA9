@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: InstructionState contains the prototypes for printing the instructions to the screen
 */
 #ifndef INSTRUCTIONSSTATE_H
 #define INSTRUCTIONSSTATE_H

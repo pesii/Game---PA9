@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: PlayState contains the prototype for initializing the game screen
 */
 #ifndef PLAYSTATE_H
 #define PLAYSTATE_H
@@ -11,8 +11,8 @@
 #include "State.h"
 #include "standard_dependency.h"
 #include "StateManager.h"
-#include "Game.h"
-#include <SFML/Audio.hpp>
+#include "Player.h"
+#include "Enemy.h"
 
 class PlayState : public State
 {

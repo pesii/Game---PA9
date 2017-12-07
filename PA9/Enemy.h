@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: Enemy contains the prototypes for creating an enemy object. The Enemy class uses the constructor of the SpawnObject class to initialize its attributes
 */
 #ifndef ENEMY_H
 #define ENEMY_H

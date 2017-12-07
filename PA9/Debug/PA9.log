@@ -1,2 +1,4 @@
-﻿  PA9.vcxproj -> C:\Users\Kaotixs\Source\Repos\Game---PA9\Debug\PA9.exe
+﻿  CreditsState.cpp
+c:\users\kaotixs\source\repos\game---pa9\pa9\creditsstate.cpp(59): warning C4305: 'argument': truncation from 'double' to 'float'
+  PA9.vcxproj -> C:\Users\Kaotixs\Source\Repos\Game---PA9\Debug\PA9.exe
   PA9.vcxproj -> C:\Users\Kaotixs\Source\Repos\Game---PA9\Debug\PA9.pdb (Full PDB)

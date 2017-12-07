@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: Contains the prototypes for the Menu Screen functions
 */
 #ifndef MENUSYSTEMTEST_H
 #define MENUSYSTEMTEST_h

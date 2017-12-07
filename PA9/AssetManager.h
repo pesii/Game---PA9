@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: Asset manager contains the prototype for importing texture, font, and other graphical dependencies to the screen
 */
 #ifndef ASSETMANAGER_H
 #define ASSETMANAGER_H

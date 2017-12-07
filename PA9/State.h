@@ -3,7 +3,8 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: State contains the prototype for creating, deleting, and handling different states
+*				the States are defined as different screen types
 */
 #ifndef STATE_H
 #define STATE_H

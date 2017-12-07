@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: Projectile contains the prototype for creating a projectile object
 */
 #ifndef PROJECTILE_H
 #define PROJECTILE_H

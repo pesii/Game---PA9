@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: SpawnObjects is an abstract class containing the constructor for Projectile, Enemy, and Player objects
 */
 #ifndef SPAWNOBJECTS_H
 #define SPAWNOBJECTS_H
