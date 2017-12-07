@@ -3,9 +3,10 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: this file contains the functions for printing the instructions to the screen
 */
 #include "InstructionsState.h"
+
 
 InstructionsState::InstructionsState(StateManager * gameStateManager)
 {

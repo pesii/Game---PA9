@@ -1,3 +1,25 @@
-﻿  Player.cpp
+﻿  StateManager.cpp
+  SplashState.cpp
+  Player.cpp
+  PlayState.cpp
+c:\users\kaotixs\source\repos\game---pa9\pa9\playstate.cpp(77): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\kaotixs\source\repos\game---pa9\pa9\playstate.cpp(149): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\kaotixs\source\repos\game---pa9\pa9\playstate.cpp(152): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\kaotixs\source\repos\game---pa9\pa9\playstate.cpp(166): warning C4244: '=': conversion from 'time_t' to 'long', possible loss of data
+c:\users\kaotixs\source\repos\game---pa9\pa9\playstate.cpp(173): warning C4018: '<': signed/unsigned mismatch
+c:\users\kaotixs\source\repos\game---pa9\pa9\playstate.cpp(177): warning C4018: '<': signed/unsigned mismatch
+c:\users\kaotixs\source\repos\game---pa9\pa9\playstate.cpp(187): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\kaotixs\source\repos\game---pa9\pa9\playstate.cpp(232): warning C4018: '<': signed/unsigned mismatch
+c:\users\kaotixs\source\repos\game---pa9\pa9\playstate.cpp(238): warning C4018: '<': signed/unsigned mismatch
+c:\users\kaotixs\source\repos\game---pa9\pa9\playstate.cpp(263): warning C4018: '<': signed/unsigned mismatch
+c:\users\kaotixs\source\repos\game---pa9\pa9\playstate.cpp(277): warning C4018: '<': signed/unsigned mismatch
+c:\users\kaotixs\source\repos\game---pa9\pa9\playstate.cpp(278): warning C4305: 'argument': truncation from 'double' to 'float'
+  MenuSystemTest.cpp
+  MenuState.cpp
+c:\users\kaotixs\source\repos\game---pa9\pa9\menustate.cpp(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\kaotixs\source\repos\game---pa9\pa9\menustate.cpp(106): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Main.cpp
+  InstructionsState.cpp
+  Generating Code...
   PA9.vcxproj -> C:\Users\Kaotixs\Source\Repos\Game---PA9\Debug\PA9.exe
   PA9.vcxproj -> C:\Users\Kaotixs\Source\Repos\Game---PA9\Debug\PA9.pdb (Full PDB)

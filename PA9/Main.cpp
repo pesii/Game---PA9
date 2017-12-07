@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: this is the main file that calls the program and makes everything run
 */
 //#include "Header.h"
 #include "standard_dependency.h"

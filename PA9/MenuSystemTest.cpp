@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: Contains test functions for the Menu Screen functions
 */
 #include "MenuSystemTest.h"
 

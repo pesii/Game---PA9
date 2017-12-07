@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: Player contains the functions for creating a player object that shoots projectiles at anenemy
 */
 #include "Player.h"
 

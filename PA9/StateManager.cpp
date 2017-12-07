@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: StateManager contains the functions for handling different states as the program executes
 */
 #include "StateManager.h"
 

@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description: Player contains the prototypes for creating a player object that shoots projectiles to enemy
+* Description: Player contains the prototypes for creating a player object that shoots projectiles at enemy
 */
 #ifndef PLAYER_H
 #define PLAYER_H

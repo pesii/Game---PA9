@@ -3,7 +3,7 @@
 * Class: CptS 122
 * Programming Assignment: PA9
 * Date: 06/12/2017
-* Description:
+* Description: this file contains all the function necessary for a fully working menu
 */
 #include "MenuState.h"
 #include "CreditsState.h"
