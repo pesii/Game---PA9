@@ -19,7 +19,7 @@ class Game {
 public:
 	Game();
 	void runGame();
-	void moveProjectiles(vector<Projectile*> &projectiles);
+	void moveProjectiles(vector<sf::Sprite*> &projectiles);
 };
 
 #endif

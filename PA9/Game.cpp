@@ -26,7 +26,7 @@ void Game::runGame() {
 	Enemy enemy4(sf::Color::White, sf::Vector2f(30, 20), sf::Vector2f(400, 0));
 	Enemy enemy5(sf::Color::Yellow, sf::Vector2f(30, 20), sf::Vector2f(500, 0));
 
- 	vector<Projectile*> projectiles;
+ 	vector<sf::Sprite*> projectiles;
 	//vector<Enemy*> enemies;
 
 	sf::FloatRect enemyHitbox;
@@ -83,7 +83,7 @@ void Game::runGame() {
 		}
 		if (fireKeyPressed == true) {
 		//	cout << "Fire key pressed!\n";
-			//Projectile* p1 = new Projectile(sf::Color::Red, 5, thePlayer.getPosition());
+			//sf::Sprite* p1 = new sf::Sprite(sf::Color::Red, 5, thePlayer.getPosition());
 			//projectiles.push_back(p1);
 			fireKeyPressed = false;
 		}
@@ -109,7 +109,7 @@ void Game::runGame() {
 
 		//enemyHitbox = enemy.getGlobalBounds();
 		//if (enemyHitbox.contains(projectile.at(i).getPosition()) || enemyHitbox.contains(projectile2.getPosition()) || enemyHitbox.contains(projectile3.getPosition()) || enemyHitbox.contains(projectile4.getPosition()) || enemyHitbox.contains(projectile5.getPosition()) || enemyHitbox.contains(projectile6.getPosition()) || enemyHitbox.contains(projectile7.getPosition()) || enemyHitbox.contains(projectile8.getPosition()) || enemyHitbox.contains(projectile9.getPosition()) || enemyHitbox.contains(projectile10.getPosition())) {
-		//	cout << "Projectile hit enemy\n";
+		//	cout << "sf::Sprite hit enemy\n";
 		//}
 
 		window.display();
@@ -124,7 +124,7 @@ void Game::runGame() {
 	}
 }
 
-void Game::moveProjectiles(vector<Projectile*> &projectiles){
+void Game::moveProjectiles(vector<sf::Sprite*> &projectiles){
 	for (int i = 0; i < projectiles.size(); i++) {
 		projectiles.at(i)->move(0, -1);
 		

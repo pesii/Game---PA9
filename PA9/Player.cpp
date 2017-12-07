@@ -16,3 +16,10 @@ Player::Player(sf::Color const &newColor, sf::Vector2f const &size, sf::Vector2f
 	}
 }
 */
+
+
+void Player::loadTexture() {
+	playertexture.loadFromFile("Enemies.jpg");
+	cout << "Texture has been loaded" << endl;
+
+}

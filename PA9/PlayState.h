@@ -25,9 +25,16 @@ public:
    void HandleInput();
    void Draw();
 
+   void loadTexture();
+   Player thePlayer;
 private:
-   void moveProjectiles(vector<Projectile*> &projectiles);
+   void moveProjectiles(vector<sf::Sprite*> &projectiles);
    void moveEnemies(vector<Enemy *>& enemies);
+
+   sf::Texture texture;
+   sf::Texture enemytexture;
+
+
 
    StateManager * gameStates;
    sf::Sprite mBackground;
@@ -42,10 +49,13 @@ private:
    int score;
    bool isGameOver;
 
-   Player thePlayer;
+   //Player thePlayer;
+   
    //Enemy enemy1, enemy2, enemy3, enemy4, enemy5;
 
-   vector<Projectile*> projectiles;
+  // vector<sf::Sprite*> projectiles;
+   vector<sf::Sprite*> projectiles;
+
    vector<Enemy*> enemies;
    sf::FloatRect enemyHitbox;
    bool leftisPressed, rightisPressed, fireKeyPressed;

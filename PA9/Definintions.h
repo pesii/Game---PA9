@@ -10,7 +10,7 @@
 
 //definitions of some essential values
 #define SCREEN_WIDTH 720
-#define SCREEN_HEIGHT 900
+#define SCREEN_HEIGHT 800
 #define PLAYER_WIDTH 30
 #define PLAYER_HEIGHT 20
 #define ENEMY_WIDTH 30

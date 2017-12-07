@@ -11,6 +11,8 @@ void PlayState::Init()
    gameStates->assets.loadTexture("Menu Background", MENU_STATE_BACKGROUND_FILEPATH);
    mBackground.setTexture(gameStates->assets.getTexture("Menu Background"));
 
+   loadTexture();
+
    // Load font
    gameStates->assets.loadFont("Menu Font", MENU_FONT);
    mFont = gameStates->assets.getFont("Menu Font");
@@ -62,12 +64,12 @@ void PlayState::Init()
 
    //::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "In Development");
 
-   //Player thePlayer(sf::Color::Green, sf::Vector2f(PLAYER_WIDTH, PLAYER_HEIGHT), sf::Vector2f(0, SCREEN_HEIGHT - PLAYER_HEIGHT));
+   //Player thePlayer(sf::Color::Transparent, sf::Vector2f(PLAYER_WIDTH, PLAYER_HEIGHT), sf::Vector2f(0, SCREEN_HEIGHT - PLAYER_HEIGHT));
    //Player enemy(sf::Color::Red, sf::Vector2f(30, 30), sf::Vector2f(gameStates->window.getSize().y / 2, gameStates->window.getSize().y / 2));
 
-   thePlayer.setFillColor(sf::Color::Green);
+   /*thePlayer.setFillColor(sf::Color::Transparent);
    thePlayer.setSize(sf::Vector2f(PLAYER_WIDTH, PLAYER_HEIGHT));
-   thePlayer.setPosition(sf::Vector2f(0, SCREEN_HEIGHT - PLAYER_HEIGHT));
+   thePlayer.setPosition(sf::Vector2f(0, SCREEN_HEIGHT - PLAYER_HEIGHT));*/
 
    // Spawn Enemy Wave
    for (int i = 0; i < 6; i++)
@@ -105,7 +107,7 @@ void PlayState::Init()
    //Enemy enemy4(sf::Color::White, sf::Vector2f(30, 20), sf::Vector2f(400, 0));
    //Enemy enemy5(sf::Color::Yellow, sf::Vector2f(30, 20), sf::Vector2f(500, 0));
 
-   //vector<Projectile*> projectiles;
+   //vector<sf::Sprite*> projectiles;
    //vector<Enemy*> enemies;
 
    //sf::FloatRect enemyHitbox;
@@ -187,16 +189,20 @@ void PlayState::HandleInput()
       {
          if (time_accumulator - last_time >= 1)
          {
-            //	cout << "Fire key pressed!\n";
-            Projectile * p1 = new Projectile(sf::Color::Red, sf::Vector2f(10, 10), thePlayer.getPosition());
-            projectiles.push_back(p1);
+			 sf::Sprite* s = new sf::Sprite();
+			 s->setPosition(thePlayer.getPosition());
+			 s->setTexture(texture);
+			 s->scale(sf::Vector2f(5.f,5.f));
+            projectiles.push_back(s);
+
+
             fireKeyPressed = false;
             last_time = time_accumulator;
          }
 
          fireKeyPressed = false;
       }
-
+	  
       // Check for projectile/enemy collision
       for (int i = 0; i < enemies.size(); i++)
       {
@@ -206,7 +212,7 @@ void PlayState::HandleInput()
          {
             if (enemyHitbox.contains((*projectiles[j]).getPosition()))
             {
-               cout << "Projectile hit enemy\n" << endl;
+               cout << "sf::Sprite hit enemy\n" << endl;
                delete projectiles.at(j);
                projectiles.erase(projectiles.begin()+j);
             
@@ -286,7 +292,7 @@ void PlayState::Draw()
 
 }
 
-void PlayState::moveProjectiles(vector<Projectile*>& projectiles)
+void PlayState::moveProjectiles(vector<sf::Sprite*>& projectiles)
 {
    for (int i = 0; i < projectiles.size(); i++) {
       projectiles.at(i)->move(0, -1);
@@ -324,4 +330,11 @@ void PlayState::moveEnemies(vector<Enemy *>& enemies)
          isGameOver = true;
       }
    }
+}
+
+void PlayState::loadTexture() {
+	texture.loadFromFile("Bullet.jpg");
+	//playertexture.loadFromFile("player.jpg");
+	enemytexture.loadFromFile("Enemies.jpg");
+
 }

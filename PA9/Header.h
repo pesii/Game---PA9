@@ -26,9 +26,9 @@ private:
 
 };
 
-class Projectile: public sf::CircleShape {
+class sf::Sprite: public sf::CircleShape {
 public:
-	Projectile(const sf::Color & color, const float & radius, const sf::Vector2f & position);
+	sf::Sprite(const sf::Color & color, const float & radius, const sf::Vector2f & position);
 	void Load(const sf::Color & color, const float & radius, const sf::Vector2f & position);
 	void Destroy();
 
@@ -41,7 +41,7 @@ class Game {
 public:
 	Game();
 	void runGame();
-	void moveProjectiles(Projectile &projectile1, Projectile &projectile2, Projectile &projectile3, Projectile &projectile4, Projectile &projectile5, Projectile &projectile6, Projectile &projectile7, Projectile &projectile8, Projectile &projectile9, Projectile &projectile10);
-	void checkProjectiles(Projectile &projectile1, Projectile &projectile2, Projectile &projectile3, Projectile &projectile4, Projectile &projectile5, Projectile &projectile6, Projectile &projectile7, Projectile &projectile8, Projectile &projectile9, Projectile &projectile10);
+	void moveProjectiles(sf::Sprite &projectile1, sf::Sprite &projectile2, sf::Sprite &projectile3, sf::Sprite &projectile4, sf::Sprite &projectile5, sf::Sprite &projectile6, sf::Sprite &projectile7, sf::Sprite &projectile8, sf::Sprite &projectile9, sf::Sprite &projectile10);
+	void checkProjectiles(sf::Sprite &projectile1, sf::Sprite &projectile2, sf::Sprite &projectile3, sf::Sprite &projectile4, sf::Sprite &projectile5, sf::Sprite &projectile6, sf::Sprite &projectile7, sf::Sprite &projectile8, sf::Sprite &projectile9, sf::Sprite &projectile10);
 };
 #endif

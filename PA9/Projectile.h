@@ -9,15 +9,15 @@
 #define PROJECTILE_H
 
 #include "SpawnObjects.h"
-
-class Projectile: public sf::RectangleShape {
-public:
-	Projectile();
-	Projectile(const sf::Color &color, const sf::Vector2f &size, const sf::Vector2f &position);
-
-
-private:
-
-};
+//
+//class sf::Sprite: public sf::RectangleShape {
+//public:
+//	sf::Sprite();
+//	sf::Sprite(const sf::Color &color, const sf::Vector2f &size, const sf::Vector2f &position);
+//
+//
+//private:
+//
+//};
 
 #endif
