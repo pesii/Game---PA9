@@ -7,8 +7,58 @@ PlayState::PlayState(StateManager * gameStateManager)
 
 void PlayState::Init()
 {
+   // Load background texture
+   gameStates->assets.loadTexture("Menu Background", MENU_STATE_BACKGROUND_FILEPATH);
+   mBackground.setTexture(gameStates->assets.getTexture("Menu Background"));
+
+   // Load font
+   gameStates->assets.loadFont("Menu Font", MENU_FONT);
+   mFont = gameStates->assets.getFont("Menu Font");
+
    time_accumulator = time(0);
    last_time = 0;
+   score = 0;
+
+
+   scoreText.setFont(mFont);
+   scoreText.setString(std::to_string(score));
+   scoreText.setCharacterSize(SCREEN_HEIGHT / 16);
+   scoreText.setFillColor(sf::Color::Red);
+   scoreText.setPosition(SCREEN_WIDTH *0.9, SCREEN_HEIGHT *0.05);
+   scoreText.setOutlineColor(sf::Color::Blue);
+   scoreText.setOutlineThickness(7);
+
+   scoreLabel.setFont(mFont);
+   scoreLabel.setString("Score: ");
+   scoreLabel.setCharacterSize(SCREEN_HEIGHT / 16);
+   scoreLabel.setFillColor(sf::Color::Red);
+   scoreLabel.setPosition(SCREEN_WIDTH *0.5, SCREEN_HEIGHT *0.05);
+   scoreLabel.setOutlineColor(sf::Color::Blue);
+   scoreLabel.setOutlineThickness(7);
+
+   highScoreText.setFont(mFont);
+   highScoreText.setString(std::to_string(gameStates->highScore));
+   highScoreText.setCharacterSize(SCREEN_HEIGHT / 16);
+   highScoreText.setFillColor(sf::Color::Red);
+   highScoreText.setPosition(SCREEN_WIDTH *0.4, SCREEN_HEIGHT *0.05);
+   highScoreText.setOutlineColor(sf::Color::Blue);
+   highScoreText.setOutlineThickness(7);
+
+   highScoreLabel.setFont(mFont);
+   highScoreLabel.setString("High: ");
+   highScoreLabel.setCharacterSize(SCREEN_HEIGHT / 16);
+   highScoreLabel.setFillColor(sf::Color::Red);
+   highScoreLabel.setPosition(SCREEN_WIDTH *0.1, SCREEN_HEIGHT *0.05);
+   highScoreLabel.setOutlineColor(sf::Color::Blue);
+   highScoreLabel.setOutlineThickness(7);
+
+   winText.setFont(mFont);
+   winText.setString("");
+   winText.setCharacterSize(SCREEN_HEIGHT / 16);
+   winText.setFillColor(sf::Color::Red);
+   winText.setPosition(SCREEN_WIDTH *0.5, SCREEN_HEIGHT *0.5);
+   winText.setOutlineColor(sf::Color::Blue);
+   winText.setOutlineThickness(7);
 
    //::RenderWindow window(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "In Development");
 
@@ -20,10 +70,10 @@ void PlayState::Init()
    thePlayer.setPosition(sf::Vector2f(0, SCREEN_HEIGHT - PLAYER_HEIGHT));
 
    // Spawn Enemy Wave
-   for (int i = 0; i < 10; i++)
+   for (int i = 0; i < 6; i++)
    {
       Enemy * e1 = new Enemy();
-      e1->setPosition(100 * i, 0);
+      e1->setPosition(100 * i, 50 * i);
       enemies.push_back(e1);
    }
 
@@ -60,6 +110,7 @@ void PlayState::Init()
 
    //sf::FloatRect enemyHitbox;
 
+   bool isGameOver = false;
    bool leftisPressed = false;
    bool rightisPressed = false;
    bool fireKeyPressed = false;
@@ -74,6 +125,7 @@ void PlayState::Update()
 
 void PlayState::HandleInput()
 {
+   isGameOver = false;
    while (gameStates->window.isOpen())
    {
       time_accumulator = time(0);
@@ -85,35 +137,39 @@ void PlayState::HandleInput()
       {
          if (event.type == sf::Event::Closed)
             gameStates->window.close();
+         
+         if (isGameOver && event.type == sf::Event::KeyPressed)
+            gameStates->RemoveState();
+         
          if (event.type == sf::Event::KeyPressed)
          {
-            if (!leftisPressed && event.key.code == sf::Keyboard::S)
+            if (!leftisPressed && event.key.code == sf::Keyboard::Left)
             {
                leftisPressed = true;
-               cout << "S" << endl;
+               //cout << "S" << endl;
             }
-            if (!rightisPressed && event.key.code == sf::Keyboard::D)
+            if (!rightisPressed && event.key.code == sf::Keyboard::Right)
             {
                rightisPressed = true;
-               cout << "D" << endl;
+               //cout << "D" << endl;
             }
-            if (!fireKeyPressed && event.key.code == sf::Keyboard::A)
+            if (!fireKeyPressed && event.key.code == sf::Keyboard::Space)
             {
                fireKeyPressed = true;
-               cout << "A" << endl;
+               //cout << "A" << endl;
             }
          }
          if (event.type == sf::Event::KeyReleased)
          {
-            if (leftisPressed && event.key.code == sf::Keyboard::S)
+            if (leftisPressed && event.key.code == sf::Keyboard::Left)
             {
                leftisPressed = false;
             }
-            if (rightisPressed && event.key.code == sf::Keyboard::D)
+            if (rightisPressed && event.key.code == sf::Keyboard::Right)
             {
                rightisPressed = false;
             }
-            if (fireKeyPressed && event.key.code == sf::Keyboard::A)
+            if (fireKeyPressed && event.key.code == sf::Keyboard::Space)
             {
                fireKeyPressed = false;
             }
@@ -132,24 +188,15 @@ void PlayState::HandleInput()
          if (time_accumulator - last_time >= 1)
          {
             //	cout << "Fire key pressed!\n";
-			 sf::Texture texture;
-			if(!texture.loadFromFile("Bullet.jpg")) {
-				cout << "Error loading texture!" << endl;	
-			} else {
-				cout << "Loaded texture" << endl;
-			}
-
             Projectile * p1 = new Projectile(sf::Color::Red, sf::Vector2f(10, 10), thePlayer.getPosition());
-            p1->setTexture(&texture, true);
-			projectiles.push_back(p1);
-			projectiles.at(0)->setTexture(&texture);
-
+            projectiles.push_back(p1);
             fireKeyPressed = false;
             last_time = time_accumulator;
          }
 
          fireKeyPressed = false;
       }
+
       // Check for projectile/enemy collision
       for (int i = 0; i < enemies.size(); i++)
       {
@@ -163,34 +210,49 @@ void PlayState::HandleInput()
                delete projectiles.at(j);
                projectiles.erase(projectiles.begin()+j);
             
-               delete enemies.at(i);
-               enemies.erase(enemies.begin()+i);
+               //delete enemies.at(i);
+               //enemies.erase(enemies.begin()+i);
+               (*enemies.at(i)).setPosition(sf::Vector2f((*enemies.at(i)).getPosition().x, 0+score*10));
+
+               scoreText.setString(std::to_string(++score));
+
+               if (score > gameStates->highScore)
+               {
+                  gameStates->highScore = score;
+                  highScoreText.setString(std::to_string(gameStates->highScore));
+               }
+
+               if (score > 100)
+               {
+                  winText.setString("You Win!");
+                  isGameOver = true;
+               }
             }
          }
       }
-	  //cout << gameStates->GetActiveState() << endl;
+
       moveProjectiles(projectiles);
       moveEnemies(enemies);
       Draw();
 
-	  if(enemies.size() == 0) {
-			PlayState::~PlayState();
-		  
-			//MenuState *temp;
-			//gameStates->AddState(temp);
-			gameStates->window.close();
-			MenuSystemTest test;
-			test.RunMenu();
-	  }
-
+      if (event.type == sf::Event::Closed)
+         gameStates->window.close();
+         
    }
 
 }
 
 void PlayState::Draw()
 {
-   gameStates->window.clear();
+   gameStates->window.clear(sf::Color::Black);
 
+   gameStates->window.draw(mBackground);
+   gameStates->window.draw(gameEndText);
+   gameStates->window.draw(scoreText);
+   gameStates->window.draw(scoreLabel);
+   gameStates->window.draw(highScoreText);
+   gameStates->window.draw(highScoreLabel);
+   gameStates->window.draw(winText);
    gameStates->window.draw(thePlayer);
 
    //this loop checks if there is anything in the projectiles vector, and draws them
@@ -205,6 +267,7 @@ void PlayState::Draw()
          gameStates->window.draw(*enemies.at(i));
       }
    }
+
 
    //gameStates->window.draw(enemy1);
    //gameStates->window.draw(enemy2);
@@ -249,6 +312,16 @@ void PlayState::moveEnemies(vector<Enemy *>& enemies)
          cout << "Deleted enemy!" << endl;
          delete enemies.at(i);
          enemies.erase(enemies.begin()+i);
+
+         gameEndText.setFont(mFont);
+         gameEndText.setString("Game Over");
+         gameEndText.setCharacterSize(SCREEN_HEIGHT / 16);
+         gameEndText.setFillColor(sf::Color::Red);
+         gameEndText.setPosition(SCREEN_WIDTH / 2.4, SCREEN_HEIGHT / 6);
+         gameEndText.setOutlineColor(sf::Color::Blue);
+         gameEndText.setOutlineThickness(7);
+
+         isGameOver = true;
       }
    }
 }

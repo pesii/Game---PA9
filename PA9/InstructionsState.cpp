@@ -32,7 +32,7 @@ void InstructionsState::Init()
    Instruction1.setOutlineThickness(7);
 
    Instruction2.setFont(mFont);
-   Instruction2.setString("MOVE RIGHT:     A");
+   Instruction2.setString("MOVE LEFT:  Left Arrow");
    Instruction2.setCharacterSize(SCREEN_HEIGHT / 24);
    Instruction2.setFillColor(sf::Color::Red);
    Instruction2.setPosition(SCREEN_WIDTH / 5, 200);
@@ -40,7 +40,7 @@ void InstructionsState::Init()
    Instruction2.setOutlineThickness(7);
 
    Instruction3.setFont(mFont);
-   Instruction3.setString("MOVE RIGHT:     D");
+   Instruction3.setString("MOVE RIGHT:  Right Arrow");
    Instruction3.setCharacterSize(SCREEN_HEIGHT / 24);
    Instruction3.setFillColor(sf::Color::Red);
    Instruction3.setPosition(SCREEN_WIDTH / 5, 300);
@@ -48,7 +48,7 @@ void InstructionsState::Init()
    Instruction3.setOutlineThickness(7);
 
    Instruction4.setFont(mFont);
-   Instruction4.setString("FIRE:                      P");
+   Instruction4.setString("FIRE:               SPACEBAR");
    Instruction4.setCharacterSize(SCREEN_HEIGHT / 24);
    Instruction4.setFillColor(sf::Color::Red);
    Instruction4.setPosition(SCREEN_WIDTH / 5, 400);

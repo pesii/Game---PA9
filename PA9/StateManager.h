@@ -25,9 +25,11 @@ public:
 
    sf::RenderWindow window;
    AssetManager assets;
+   int highScore;
 
 private:
    std::stack<State*> allStates;
+   
    
 
    bool isAdding;

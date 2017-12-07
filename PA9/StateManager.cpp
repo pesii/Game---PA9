@@ -11,6 +11,7 @@ StateManager::StateManager()
 {
    // Update Window
    window.create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Menu", sf::Style::Close | sf::Style::Titlebar);
+   highScore = 0;
 
 }
 
