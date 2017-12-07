@@ -5,6 +5,7 @@
 
 # Summary 
 This project is guaranteed to compile under Visual Studio 2015, using the v140 compiler. 
+
 External libraries you will need for compiling this project is the 32-bit version of the SFML 2.4.2 library which can be fetched from https://www.sfml-dev.org/download.php
 
 Target Platform Version 8.1
