@@ -1,7 +1,7 @@
 # Yet Another Alien Invaders
 *Developed for CPTS 122 - Programming Assignment 9*
 ## Team
-### Derek N., Jacob J., Kostya S., Pesi T.
+**Derek N., Jacob J., Kostya S., Pesi T.**
 
 ## Installation Wiki 
 This project is guaranteed to compile under Visual Studio 2015, using the v140 compiler. 
